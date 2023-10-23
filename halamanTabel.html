@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tabel List Pendaftar | Pendaftaran Asistensi Praktikum</title>
+    <link rel="stylesheet" href="tabel.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <header>
+      <div class="mobile-top-layer">
+        <img src="Logo_ITERA_2.png" alt="" width="50px" height="50px" />
+        <p>PENDAFTARAN ASISTEN PRAKTIKUM</p>
+        <button class="hamburger" onclick="toggleHamburger()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+      <nav>
+        <ul type="none" class="nav-buttons" id="nav">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="halamanFormulir.html">Formulir</a></li>
+          <li><a href="halamanTabel.html">Tabel</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <aside id="sidebar">
+        <ul type="none">
+          <li>
+            <a href="index.html"><i class="fa-solid fa-house"></i> Home</a>
+          </li>
+          <li>
+            <a href="halamanFormulir.html"><i class="fa-solid fa-file"></i> Formulir</a>
+          </li>
+          <li>
+            <a href="halamanTabel.html"><i class="fa-solid fa-table"></i> Table</a>
+          </li>
+        </ul>
+        <button onclick="toggleSideBar()"><i class="fa-solid fa-angles-right" id="angles-right"></i></button>
+      </aside>
+      <article>
+        <h1>List Mahasiswa Pendaftar</h1>
+        <div style="overflow-x: auto">
+          <table>
+            <thead>
+              <tr>
+                <th>Nama</th>
+                <th>NIM</th>
+                <th>Program Studi</th>
+                <th>Email</th>
+                <th>Password</th>
+                <th>Jenis Kelamin</th>
+                <th>Tanggal Lahir</th>
+                <th>Alamat</th>
+              </tr>
+            </thead>
+            <tbody id="dataBody">
+              <tr>
+                <td>John Doe</td>
+                <td>123456</td>
+                <td>Teknik Informatika</td>
+                <td>john.doe@example.com</td>
+                <td>********</td>
+                <td>Laki-laki</td>
+                <td>1995-03-15</td>
+                <td>Jl. Contoh No. 123</td>
+              </tr>
+              <tr>
+                <td>Jane Smith</td>
+                <td>654321</td>
+                <td>Manajemen Bisnis</td>
+                <td>jane.smith@example.com</td>
+                <td>********</td>
+                <td>Perempuan</td>
+                <td>1998-07-22</td>
+                <td>Jl. Sample No. 456</td>
+              </tr>
+              <tr>
+                <td>Alice Johnson</td>
+                <td>987654</td>
+                <td>Psikologi</td>
+                <td>alice.johnson@example.com</td>
+                <td>********</td>
+                <td>Perempuan</td>
+                <td>1997-11-30</td>
+                <td>Jl. Dummy No. 789</td>
+              </tr>
+              <tr>
+                <td>Bob Brown</td>
+                <td>456789</td>
+                <td>Teknik Elektro</td>
+                <td>bob.brown@example.com</td>
+                <td>********</td>
+                <td>Laki-laki</td>
+                <td>1996-05-10</td>
+                <td>Jl. Test No. 1011</td>
+              </tr>
+              <tr>
+                <td>Eve Davis</td>
+                <td>321654</td>
+                <td>Kedokteran</td>
+                <td>eve.davis@example.com</td>
+                <td>********</td>
+                <td>Perempuan</td>
+                <td>1999-02-18</td>
+                <td>Jl. Example No. 1213</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </article>
+    </main>
+    <footer>
+      <img src="Logo_ITERA_2.png" alt="" width="50" height="50" />
+      <p>Copyright &#169; 2023, Alvin Yoga Kesuma | 121140154. All Right Reserved.</p>
+    </footer>
+    <script>
+      var nav = document.getElementById("nav");
+      var sidebar = document.getElementById("sidebar");
+      var angles_right = document.getElementById("angles-right");
+
+      function toggleHamburger() {
+        if (nav.style.display === "none") {
+          nav.style.display = "flex";
+        } else {
+          nav.style.display = "none";
+        }
+      }
+
+      function toggleSideBar() {
+        if (sidebar.style.translate === "-95px -50%") {
+          sidebar.style.translate = "0px -50%";
+          angles_right.style.rotate = "180deg";
+        } else {
+          sidebar.style.translate = "-95px -50%";
+          angles_right.style.rotate = "0deg";
+        }
+      }
+
+      function handleViewportChange() {
+        if (window.innerWidth >= 630) {
+          nav.style.display = "flex";
+        }
+      }
+
+      window.addEventListener("load", handleViewportChange);
+      window.addEventListener("resize", handleViewportChange);
+    </script>
+    <script>
+      // Function to parse query parameters from the URL
+      function getQueryParams() {
+        const queryParams = {};
+        const queryString = window.location.search.substring(1);
+        const paramPairs = queryString.split("&");
+
+        for (let pair of paramPairs) {
+          const [key, value] = pair.split("=");
+          queryParams[key] = decodeURIComponent(value);
+        }
+        return queryParams;
+      }
+
+      // Function to populate the table with received data
+      function appendToTable() {
+        const dataBody = document.getElementById("dataBody");
+        const queryParams = getQueryParams();
+        const newRow = dataBody.insertRow(-1);
+
+        newRow.insertCell(0).textContent = queryParams["nama"];
+        newRow.insertCell(1).textContent = queryParams["nim"];
+        newRow.insertCell(2).textContent = queryParams["prodi"];
+        newRow.insertCell(3).textContent = queryParams["email"];
+        newRow.insertCell(4).textContent = queryParams["password"];
+        newRow.insertCell(5).textContent = queryParams["jenis-kelamin"];
+        newRow.insertCell(6).textContent = queryParams["tgl_lahir"];
+        newRow.insertCell(7).textContent = queryParams["alamat"];
+      }
+
+      // Call the appendToTable function when the page loads
+      appendToTable();
+    </script>
+  </body>
+</html>

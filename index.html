@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home | Pendaftaran Asistensi Praktikum</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <header>
+      <div class="mobile-top-layer">
+        <img src="Logo_ITERA_2.png" alt="" width="50px" height="50px" />
+        <p>PENDAFTARAN ASISTEN PRAKTIKUM</p>
+        <button class="hamburger" onclick="toggleHamburger()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+      <nav>
+        <ul type="none" class="nav-buttons" id="nav">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="halamanFormulir.html">Formulir</a></li>
+          <li><a href="halamanTabel.html">Tabel</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <aside id="sidebar">
+        <ul type="none">
+          <li>
+            <a href="index.html"><i class="fa-solid fa-house"></i> Home</a>
+          </li>
+          <li>
+            <a href="halamanFormulir.html"><i class="fa-solid fa-file"></i> Formulir</a>
+          </li>
+          <li>
+            <a href="halamanTabel.html"><i class="fa-solid fa-table"></i> Table</a>
+          </li>
+        </ul>
+        <button onclick="toggleSideBar()"><i class="fa-solid fa-angles-right" id="angles-right"></i></button>
+      </aside>
+      <article>
+        <h1>Asistensi Praktikum</h1>
+        <img src="photo-1509869175650-a1d97972541a.jpeg" alt="" width="200px" style="float: left; margin-right: 10px" />
+        <p>
+          Asistensi praktikum adalah kesempatan untuk membuktikan diri sebagai bagian yang integral dari perkembangan akademik di perguruan tinggi. Sebagai seorang asisten praktikum, Anda tidak hanya akan mengambil peran penting dalam
+          mendukung pendidikan, tetapi juga memperluas jaringan sosial Anda, belajar dari dosen dan rekan sejawat, serta memperoleh pengalaman berharga yang akan membentuk masa depan Anda. Namun, ini bukan sekadar tentang apa yang Anda
+          dapatkan. Ini tentang apa yang bisa Anda berikan. Anda memiliki peluang untuk berbagi pengetahuan, menjadi teladan, dan membantu mahasiswa dalam mengatasi tantangan akademik mereka.
+        </p>
+        <p>
+          Kami mengundang Anda untuk menjalani perjalanan ini bersama kami. Jika Anda memiliki minat dalam menjadi asisten praktikum dan percaya bahwa Anda memiliki dedikasi, pengetahuan, dan kemampuan yang diperlukan, mari bergabung dengan
+          tim kami. Pendaftaran sebagai asisten praktikum adalah langkah pertama dalam mengejar karier akademik yang cemerlang dan memberikan dampak positif pada pendidikan. Kami menantikan kontribusi Anda untuk keberhasilan program ini dan
+          pertumbuhan akademik bersama. Segera kunjungi situs web pendaftaran untuk mengetahui detail lebih lanjut dan mendaftar sebagai asisten praktikum. Bersama-sama, kita dapat menciptakan pengalaman praktikum yang luar biasa dan
+          membantu mahasiswa mencapai potensi terbaik mereka.
+        </p>
+        <p>
+          Nah, jadi asistensi praktikum ini sebenarnya gak cuma tugas serius doang, lho. Ini juga kesempatan buat bikin temen-temen baru, belajar dari dosen, dan dapet pengalaman yang ngaruh buat masa depan kamu. Tapi yang paling keren, ini
+          tentang berbagi, bukan cuma mengambil. Kamu bisa ngasih ilmu, jadi panutan, dan bantuin temen-temen yang lagi berjuang di mata kuliah.
+        </p>
+        <p>
+          Jadi, gimana? Kita lagi buka pintu buat kamu yang pengen jadi asisten praktikum. Kalo kamu punya semangat, niat, dan rasa percaya diri, yuk, gabung sama tim kita. Langkah pertama buat karier akademik dan buat perubahan positif di
+          dunia pendidikan dimulai dari sini. Kita nggak sabar buat nerima kontribusi dari kamu buat suksesnya program ini. Gampang, kok, caranya. Cukup mampir ke situs pendaftaran buat tau detail lebih lengkap dan langsung daftar jadi
+          asisten praktikum. Bareng kita, kita bisa bikin pengalaman praktikum jadi keren dan bantu temen-temen kita capai yang terbaik!
+        </p>
+      </article>
+    </main>
+    <footer>
+      <img src="Logo_ITERA_2.png" alt="" width="50" height="50" />
+      <p>Copyright &#169; 2023, Alvin Yoga Kesuma | 121140154. All Right Reserved.</p>
+    </footer>
+    <script>
+      var nav = document.getElementById("nav");
+      var sidebar = document.getElementById("sidebar");
+      var angles_right = document.getElementById("angles-right");
+
+      function toggleHamburger() {
+        if (nav.style.display === "none") {
+          nav.style.display = "flex";
+        } else {
+          nav.style.display = "none";
+        }
+      }
+
+      function toggleSideBar() {
+        if (sidebar.style.translate === "-95px -50%") {
+          sidebar.style.translate = "0px -50%";
+          angles_right.style.rotate = "180deg";
+        } else {
+          sidebar.style.translate = "-95px -50%";
+          angles_right.style.rotate = "0deg";
+        }
+      }
+
+      function handleViewportChange() {
+        if (window.innerWidth >= 630) {
+          nav.style.display = "flex";
+        }
+      }
+
+      window.addEventListener("load", handleViewportChange);
+      window.addEventListener("resize", handleViewportChange);
+    </script>
+  </body>
+</html>

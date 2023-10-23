@@ -1,0 +1,231 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: "Poppins", sans-serif;
+}
+
+header {
+  display: flex;
+  position: sticky;
+  top: 0;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  background-color: #04364a;
+  border-bottom: 5px solid #dafffb;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+  z-index: 1000;
+}
+
+header .mobile-top-layer {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  color: #dafffb;
+}
+
+header .mobile-top-layer .hamburger {
+  display: none;
+}
+
+header nav .nav-buttons {
+  display: none;
+  align-items: center;
+  gap: 15px;
+}
+
+.nav-buttons a {
+  background-color: #176b87;
+  padding: 10px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  color: #dafffb;
+  transition: all 0.125s linear;
+  -webkit-transition: all 0.125s linear;
+  -moz-transition: all 0.125s linear;
+  -ms-transition: all 0.125s linear;
+  -o-transition: all 0.125s linear;
+  font-weight: bold;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+.nav-buttons a:hover {
+  background-color: rgb(28, 131, 165);
+}
+
+main {
+  position: relative;
+}
+
+aside {
+  background-color: #04364a;
+  display: inline-block;
+  border-radius: 0px 20px 20px 0px;
+  -webkit-border-radius: 0px 20px 20px 0px;
+  -moz-border-radius: 0px 20px 20px 0px;
+  -ms-border-radius: 0px 20px 20px 0px;
+  -o-border-radius: 0px 20px 20px 0px;
+  padding: 15px 18px 15px 0px;
+  position: absolute;
+  translate: -95px -50%;
+  top: 50%;
+}
+
+aside ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: first baseline;
+  row-gap: 20px;
+}
+
+aside ul li a {
+  color: #dafffb;
+  text-decoration: none;
+  background-color: #176b87;
+  padding: 7px;
+  border-radius: 0px 5px 5px 0px;
+  -webkit-border-radius: 0px 5px 5px 0px;
+  -moz-border-radius: 0px 5px 5px 0px;
+  -ms-border-radius: 0px 5px 5px 0px;
+  -o-border-radius: 0px 5px 5px 0px;
+}
+
+aside button {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  translate: 50% -50%;
+  color: #dafffb;
+  background-color: #176b87;
+  border: none;
+  padding: 5px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+article {
+  padding: 0px 35px 10px 35px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+article h1 {
+  margin-bottom: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table,
+th,
+td {
+  border: 1px solid black;
+}
+
+table thead tr th {
+  background-color: #04364a;
+  color: #dafffb;
+}
+
+th,
+td {
+  padding: 8px;
+  text-align: left;
+}
+
+tr:nth-child(even) {
+  background-color: #176b87;
+  color: #dafffb;
+}
+
+footer {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: #04364a;
+  margin-top: 10px;
+  color: white;
+  box-sizing: border-box;
+}
+
+@media only screen and (max-width: 630px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  header .mobile-top-layer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+
+  header .mobile-top-layer .hamburger {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-right: 10px;
+    border: none;
+    background-color: #04364a;
+  }
+
+  header .mobile-top-layer .hamburger > span {
+    background-color: #dafffb;
+    width: 50px;
+    height: 10px;
+    display: block;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+  }
+
+  header nav {
+    width: 100%;
+  }
+
+  header nav .nav-buttons {
+    flex-direction: column;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    align-items: flex-start;
+    margin-bottom: 10px;
+    width: 100%;
+    gap: 0px;
+  }
+
+  header nav .nav-buttons li {
+    width: 100%;
+  }
+
+  header nav .nav-buttons li a {
+    display: block;
+    width: 100%;
+    border-radius: 0px;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    -ms-border-radius: 0px;
+    -o-border-radius: 0px;
+  }
+}

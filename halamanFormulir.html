@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulir Pendaftaran | Pendaftaran Asistensi Praktikum</title>
+    <link rel="stylesheet" href="formulir.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <header>
+      <div class="mobile-top-layer">
+        <img src="Logo_ITERA_2.png" alt="" width="50px" height="50px" />
+        <p>PENDAFTARAN ASISTEN PRAKTIKUM</p>
+        <button class="hamburger" onclick="toggleHamburger()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+      <nav>
+        <ul type="none" class="nav-buttons" id="nav">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="halamanFormulir.html">Formulir</a></li>
+          <li><a href="halamanTabel.html">Tabel</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <aside id="sidebar">
+        <ul type="none">
+          <li>
+            <a href="index.html"><i class="fa-solid fa-house"></i> Home</a>
+          </li>
+          <li>
+            <a href="halamanFormulir.html"><i class="fa-solid fa-file"></i> Formulir</a>
+          </li>
+          <li>
+            <a href="halamanTabel.html"><i class="fa-solid fa-table"></i> Table</a>
+          </li>
+        </ul>
+        <button onclick="toggleSideBar()"><i class="fa-solid fa-angles-right" id="angles-right"></i></button>
+      </aside>
+      <article>
+        <h1>Form Pendaftaran Mahasiswa</h1>
+        <form action="halamanTabel.html/" method="get" id="myForm">
+          <div>
+            <label for="nama">Nama:</label>
+            <input type="text" id="nama" class="shortinput" name="nama" required />
+          </div>
+          <div>
+            <label for="nim">NIM:</label>
+            <input type="text" id="nim" class="shortinput" name="nim" required />
+          </div>
+          <div>
+            <label for="prodi">Program Studi:</label>
+            <input type="text" id="prodi" class="shortinput" name="prodi" required />
+          </div>
+          <div>
+            <label for="email">Email:</label>
+            <input type="email" id="email" class="shortinput" name="email" required />
+          </div>
+          <div>
+            <label for="password">Password:</label>
+            <input type="password" id="password" class="shortinput" name="password" required />
+          </div>
+          <div>
+            <label>Jenis Kelamin:</label>
+            <br />
+            <select id="jenis-kelamin" name="jenis-kelamin">
+              <option value="Laki-laki">Laki-laki</option>
+              <option value="Perempuan">Perempuan</option>
+            </select>
+          </div>
+          <div>
+            <label for="tgl_lahir">Tanggal Lahir:</label>
+            <br />
+            <input type="date" id="tgl_lahir" name="tgl_lahir" required />
+          </div>
+          <div>
+            <label for="alamat">Alamat:</label>
+            <textarea id="alamat" class="shortinput" name="alamat" required></textarea>
+          </div>
+          <div>
+            <input type="submit" value="Submit" id="submit" />
+          </div>
+        </form>
+      </article>
+    </main>
+    <footer>
+      <img src="Logo_ITERA_2.png" alt="" width="50" height="50" />
+      <p>Copyright &#169; 2023, Alvin Yoga Kesuma | 121140154. All Right Reserved.</p>
+    </footer>
+    <script src="form.js"></script>
+    <script>
+      var nav = document.getElementById("nav");
+      var sidebar = document.getElementById("sidebar");
+      var angles_right = document.getElementById("angles-right");
+
+      function toggleHamburger() {
+        if (nav.style.display === "none") {
+          nav.style.display = "flex";
+        } else {
+          nav.style.display = "none";
+        }
+      }
+
+      function toggleSideBar() {
+        if (sidebar.style.translate === "-95px -50%") {
+          sidebar.style.translate = "0px -50%";
+          angles_right.style.rotate = "180deg";
+        } else {
+          sidebar.style.translate = "-95px -50%";
+          angles_right.style.rotate = "0deg";
+        }
+      }
+
+      function handleViewportChange() {
+        if (window.innerWidth >= 630) {
+          nav.style.display = "flex";
+        }
+      }
+
+      window.addEventListener("load", handleViewportChange);
+      window.addEventListener("resize", handleViewportChange);
+    </script>
+  </body>
+</html>
